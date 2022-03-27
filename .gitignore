@@ -1,0 +1,6 @@
+__pycache__
+.vscode
+.wenv
+old
+*.mp4
+*.vob

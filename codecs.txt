@@ -1,0 +1,21 @@
+Avif options
+
+--min Q                           : Set min quantizer for color (0-63, where 0 is lossless)
+--max Q                           : Set max quantizer for color (0-63, where 0 is lossless)
+--minalpha Q                      : Set min quantizer for alpha (0-63, where 0 is lossless)
+--maxalpha Q                      : Set max quantizer for alpha (0-63, where 0 is lossless) 
+-s,--speed S                      : Encoder speed (0-10, slowest-fastest, 'default' or 'd' for codec internal defaults. default speed: 6) 
+-c,--codec C                      : AV1 codec to use (choose from versions list below)
+Version: 0.9.3 (dav1d [dec]:0.9.2-0-g7b433e0, aom [enc/dec]:3.2.0, rav1e [enc]:0.5.1 (v0.5.1))
+
+-j,--jobs J                       : Number of jobs (worker threads, default: 1. Use "all" to use all available cores)
+
+Test1.
+
+Q = 31
+-s = 6, 10
+-c = aom rav1e
+-j all
+
+
+bin\ffmpeg_5\ffmpeg -hide_banner -y -i videos\1920x1080x25.mp4 -c:v hevc_nvenc -profile:v main -b_ref_mode middle -nonref_p 1 -tier high -rc-lookahead 32 -rc vbr_hq -bf 2 -cq 28 -threads %NUMBER_OF_PROCESSORS% -c:a aac -q:a 2 output\res_5.mp4

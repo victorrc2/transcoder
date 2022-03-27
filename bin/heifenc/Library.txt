@@ -1,0 +1,10 @@
+
+source: git clone https://github.com/strukturag/libheif.git
+
+libraries:
+libjpeg-turbo-2.0.91-g1388ad6      git clone https://github.com/libjpeg-turbo/libjpeg-turbo.git libjpeg-turbo     
+libpng-1.6.38-gdbe3e0c                 git clone https://git.code.sf.net/p/libpng/code libpng-code
+libde265-1.0.8-g0bc5d3b                git clone https://github.com/strukturag/libde265.git libde265
+x265-3.5+10-82786fccc(multilib:8bit+10bit+12bit)    git clone https://bitbucket.org/multicoreware/x265_git.git x265
+aom-v3.1.0-202-g7522073e0       git clone https://aomedia.googlesource.com/aom libaom
+dav1d-0.9.0-3-g41be890               git clone https://github.com/videolan/dav1d.git libdav1d
